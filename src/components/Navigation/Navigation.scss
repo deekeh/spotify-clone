@@ -2,6 +2,8 @@
   // border: dotted 1px #fff;
 
   flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
 
   .header {
     .spotify-logo {
@@ -10,6 +12,7 @@
   }
 
   ul.filters {
+    flex-grow: 1; // push user profile picture to the end
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -38,6 +41,14 @@
         border: none;
         outline: none;
       }
+    }
+  }
+
+  .user {
+    img {
+      cursor: pointer;
+      width: 48px;
+      border-radius: 1000px;
     }
   }
 }

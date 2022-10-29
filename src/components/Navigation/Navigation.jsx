@@ -24,6 +24,10 @@ function Navigation() {
           <button>Recently Played</button>
         </li>
       </ul>
+
+      <section className="user">
+        <img src="https://randomuser.me/api/portraits/women/85.jpg" alt="User Profile" />
+      </section>
     </nav>
   );
 }
