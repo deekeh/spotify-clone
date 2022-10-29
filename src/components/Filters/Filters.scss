@@ -1,5 +1,4 @@
 .Filters {
-  // border: dotted 1px #fff;
   flex-basis: 30%;
 
   display: flex;
@@ -10,6 +9,19 @@
     height: 3rem;
     display: flex;
     align-items: center;
+    gap: 1rem;
+
+    .back-button {
+      display: none;
+      background-color: transparent;
+      border: solid 2px #fff;
+      color: #fff;
+      padding: 0.2rem 0.6rem;
+
+      @media screen and (max-width: 1000px) {
+        display: inline-block;
+      }
+    }
   }
 
   form.search-form {
@@ -23,7 +35,8 @@
       input {
         flex-grow: 1;
       }
-      input, button {
+      input,
+      button {
         cursor: pointer;
         background-color: transparent;
         color: #fff;
@@ -40,5 +53,21 @@
 
   ul.songs-list {
     list-style-type: none;
+    overflow-y: auto;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding: 1rem;
+    position: absolute;
+    z-index: 1;
+    background: inherit;
+    height: calc(100vh - 1rem);
+    width: calc(100vw);
+    left: 0;
+    transition: left 0.5s;
+
+    &:not(.show) {
+      left: -100vw;
+    }
   }
 }

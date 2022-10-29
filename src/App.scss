@@ -1,5 +1,5 @@
 .App {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #080602;
   color: #fff;
 
@@ -7,4 +7,8 @@
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 }

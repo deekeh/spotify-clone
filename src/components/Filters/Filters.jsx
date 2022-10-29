@@ -5,13 +5,17 @@ import searchIcon from "../../assets/search.svg";
 // components
 import SongCard from "./SongCard/SongCard";
 
-function Filters() {
+function Filters(props) {
   return (
-    <aside className="Filters">
+    <aside className={`Filters${props.show ? ' show' : ''}`}>
       <header className="header">
         <h2>
           For You
         </h2>
+
+        <button className="back-button" onClick={() => props.toggleShow(false)}>
+          Back
+        </button>
       </header>
 
       <form className="search-form">

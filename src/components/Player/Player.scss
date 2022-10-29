@@ -1,6 +1,6 @@
 .Player {
-  // border: dotted 1px #fff;
   flex-grow: 1;
+  overflow-y: auto;
 
   display: flex;
   flex-direction: column;
@@ -8,12 +8,21 @@
 
   padding-left: 8rem;
   padding-right: 8rem;
+  @media screen and (max-width: 1000px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: center;
+  }
 
   header.header {
     margin-top: 3.7rem;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    
+    @media screen and (max-width: 1000px) {
+      margin-top: 0;
+    }
 
     h2 {
       font-weight: 500;
@@ -53,7 +62,6 @@
         width: 2rem;
         height: 2rem;
         border-radius: 1000px;
-        // border: solid 1px #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
