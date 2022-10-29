@@ -1,0 +1,43 @@
+.Navigation {
+  // border: dotted 1px #fff;
+
+  flex-basis: 20%;
+
+  .header {
+    .spotify-logo {
+      height: 3rem;
+    }
+  }
+
+  ul.filters {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding-top: 1rem;
+    li {
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+      &:hover {
+        cursor: pointer;
+        background-color: #0e0b04;
+        button {
+          cursor: pointer;
+          color: #968e82;
+        }
+      }
+      &.selected {
+        button {
+          color: #fff;
+        }
+      }
+      button {
+        font-size: 1.1rem;
+        background-color: transparent;
+        color: #79736a;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
