@@ -1,6 +1,7 @@
 .SongCard {
   padding-left: 1rem;
   padding-right: 1rem;
+  border-radius: 0.4rem;
 
   &:hover {
     background-color: #13110d;
@@ -27,6 +28,7 @@
 
     img {
       border-radius: 1000px;
+      width: 48px
     }
 
     .song-info {

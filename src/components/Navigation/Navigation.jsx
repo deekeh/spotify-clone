@@ -4,6 +4,11 @@ import "./Navigation.scss";
 import logo from "../../assets/spotify-1.svg";
 
 function Navigation(props) {
+  function changeCategory(e) {
+    props.setSelectedCategory(Number(e.target.value));
+    props.toggleSearch(true);
+  }
+
   return (
     <nav className="Navigation">
       <header className="header">
@@ -12,25 +17,24 @@ function Navigation(props) {
       </header>
 
       <ul className="filters">
-        <li className="selected">
-          <button>For You</button>
-        </li>
-        <li>
-          <button>Top Tracks</button>
-        </li>
-        <li>
-          <button>Favorites</button>
-        </li>
-        <li>
-          <button>Recently Played</button>
-        </li>
+        {
+          props.categories.map(category => (
+            <li key={category.id} className={category.id === props.selectedCategory ? 'selected' : ''}>
+              <button onClick={() => props.setSelectedCategory(category.id)}>{category.title}</button>
+            </li>
+          ))
+        }
       </ul>
 
-      <select className="filters-dropdown">
-        <option value="for-you">For You</option>
-        <option value="top-tracks">Top Tracks</option>
-        <option value="favorites">Favorites</option>
-        <option value="recently-played">Recently Played</option>
+      <select onChange={e => changeCategory(e)} className="filters-dropdown">
+        {
+          props.categories.map(category => (
+            <option
+              key={category.id}
+              value={category.id}
+            >{category.title}</option>
+          ))
+        }
       </select>
 
       <section className="user">

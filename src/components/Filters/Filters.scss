@@ -54,6 +54,7 @@
   ul.songs-list {
     list-style-type: none;
     overflow-y: auto;
+    height: 100%;
   }
 
   @media screen and (max-width: 1000px) {

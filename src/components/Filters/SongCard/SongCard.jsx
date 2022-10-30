@@ -1,22 +1,28 @@
 import "./SongCard.scss";
 
 function SongCard(props) {
+  function formatDuration(duration) {
+    const d = Number(duration);
+    if (isNaN(d)) return "0:00";
+    return `${parseInt(d / 60)}:${d % 60}`
+  }
+
   return (
     <li className={`SongCard${props.selected ? ' selected' : ''}`}>
-      <button>
-        <img src="https://picsum.photos/48/48" alt="Song Picture" />
+      <button onClick={() => props.setSong(props.song._id)}>
+        <img src={props.song?.photo} alt={props.song?.photo + 'Photo'} />
 
         <section className="song-info">
           <div className="song-name">
-            StarBoy
+            {props.song?.title}
           </div>
           <div className="song-artist">
-            The Weekend
+            {props.song?.artist}
           </div>
         </section>
 
         <div className="song-duration">
-          5:32
+          {formatDuration(props.song?.duration)}
         </div>
       </button>
     </li>
