@@ -45,20 +45,9 @@ function App() {
   const [songs, setSongs] = useState([]);
   const [selectedSong, setSelectedSong] = useState(null);
 
-  async function setCategoryAndSongs(id) {
-    setSelectedCategory(id);
-    try {
-      const songsData = await getSongs();
-      setSongs(songsData);
-    }
-    catch (err) {
-      console.error(err);
-    }
-  }
-
 
   /* ---- SONGS ---- */
-  async function getSongs() {
+  async function getSongs(id) {
     try {
       const response = await fetch("https://api.ss.dev/resource/api", {
         method: "POST",
@@ -77,7 +66,7 @@ function App() {
             }
           }`,
           variables: {
-            "playlistId": selectedCategory
+            "playlistId": id || selectedCategory
           }
         })
       });
@@ -93,6 +82,17 @@ function App() {
   function setSong(id) {
     setSelectedSong(id);
     toggleFiltersSection(false);
+  }
+
+  async function setCategoryAndSongs(id) {
+    setSelectedCategory(id);
+    try {
+      const songsData = await getSongs(id);
+      setSongs(songsData);
+    }
+    catch (err) {
+      console.error(err);
+    }
   }
 
 

@@ -42,24 +42,28 @@ function Player(props) {
     setShowVolume(state => !state);
   }
 
+  const [localSong, setLocalSong] = useState();
   useEffect(function () {
-    document.querySelector('#audio-player').currentTime = 0;
-    document.querySelector('#audio-player').pause();
-    setIsSongPlaying(false);
-    setSeekPosition(0);
+    if (!!props.song?._id && props.song?._id !== localSong?._id) {
+      setLocalSong(props.song);
+      document.querySelector('#audio-player').currentTime = 0;
+      document.querySelector('#audio-player').pause();
+      setIsSongPlaying(false);
+      setSeekPosition(0);
+    }
   }, [props.song]);
 
   return (
     <main className="Player">
-      <audio src={props.song?.url} id="audio-player" onTimeUpdate={updateSongTime}></audio>
+      <audio src={localSong?.url} id="audio-player" onTimeUpdate={updateSongTime}></audio>
       <header className="header">
-        <h2>{props.song?.title || 'Song Not Selected'}</h2>
-        <h3>{props.song?.artist || 'No Artist'}</h3>
+        <h2>{localSong?.title || 'Song Not Selected'}</h2>
+        <h3>{localSong?.artist || 'No Artist'}</h3>
       </header>
 
       <section className="player-controller">
         <div className="song-banner-container">
-          <img src={props.song?.photo || 'https://picsum.photos/id/239/800/800'} alt="Song Banner" className="hero" />
+          <img src={localSong?.photo || 'https://picsum.photos/id/239/800/800'} alt="Song Banner" className="hero" />
         </div>
         {/* hard-coding max since the duration received in API is incorrect */}
         <input
@@ -78,13 +82,13 @@ function Player(props) {
           </button>
 
           <div className="controls">
-            <button disabled={!props.song}>
+            <button disabled={!localSong}>
               <img src={previous} alt="Pevious" />
             </button>
-            <button disabled={!props.song} onClick={toggleSong}>
+            <button disabled={!localSong} onClick={toggleSong}>
               <img src={isSongPlaying ? pause : play} alt="Pause" />
             </button>
-            <button disabled={!props.song}>
+            <button disabled={!localSong}>
               <img src={next} alt="Next" />
             </button>
           </div>
