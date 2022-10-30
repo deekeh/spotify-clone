@@ -13,7 +13,8 @@
     justify-content: center;
   }
 
-  .header, .player-controller {
+  .header,
+  .player-controller {
     width: max(50%, 300px);
   }
 
@@ -22,7 +23,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    
+
     @media screen and (max-width: 1000px) {
       margin-top: 0;
     }
@@ -62,7 +63,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      button {
+      button, .volume {
         background-color: transparent;
         cursor: pointer;
         border: none;
@@ -87,11 +88,44 @@
         gap: 1rem;
       }
 
-      .elipsis, .volume {
+      .elipsis,
+      .volume {
         background-color: #1d1d1d;
         img {
           width: 60%;
           height: 60%;
+        }
+      }
+
+      .volume {
+        position: relative;
+        .volume-slider-container {
+          position: absolute;
+          bottom: 6rem;
+          transform: rotate(-90deg);
+          display: flex;
+          border-radius: 0.4rem;
+          overflow: hidden;
+          padding: 0.5rem;
+          transition: visibility 0.3s linear, opacity 0.3s linear;
+          visibility: visible;
+          opacity: 1;
+
+          &.hidden {
+            visibility: hidden;
+            opacity: 0;
+          }
+
+          .volume-slider-overlay {
+            position: absolute;
+            z-index: -1;
+            background-color: #333;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0.6;
+          }
         }
       }
     }
