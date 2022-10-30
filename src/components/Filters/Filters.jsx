@@ -10,7 +10,7 @@ function Filters(props) {
     <aside className={`Filters${props.show ? ' show' : ''}`}>
       <header className="header">
         <h2>
-          For You
+          {props.selectedCategory?.title || ''}
         </h2>
 
         <button className="back-button" onClick={() => props.toggleShow(false)}>
@@ -28,11 +28,16 @@ function Filters(props) {
       </form>
 
       <ul className="songs-list">
-        <SongCard />
-        <SongCard />
-        <SongCard />
-        <SongCard selected={true} />
-        <SongCard />
+        {
+          props.songs.map((song, idx) => (
+            <SongCard
+              selected={song._id === props.selectedSong}
+              setSong={id => props.setSong(id)}
+              key={idx}
+              song={song}
+            />
+          ))
+        }
       </ul>
     </aside>
   )
