@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/spotify-clone/static/css/main.5ecf8d25.css",
+    "main.js": "/spotify-clone/static/js/main.67aaa567.js",
+    "static/js/787.a142c313.chunk.js": "/spotify-clone/static/js/787.a142c313.chunk.js",
+    "static/media/spotify-1.svg": "/spotify-clone/static/media/spotify-1.b3db579bd6f063deb13bd8acdd5cc460.svg",
+    "index.html": "/spotify-clone/index.html",
+    "static/media/volume.svg": "/spotify-clone/static/media/volume.3b7ff4177662eadd458a91d3d7001fc6.svg",
+    "static/media/next.svg": "/spotify-clone/static/media/next.49a51b9bbf4c96d2cdfa631ed94578ad.svg",
+    "static/media/previous.svg": "/spotify-clone/static/media/previous.df887428411353710f8449be5f4396ba.svg",
+    "static/media/pause.svg": "/spotify-clone/static/media/pause.86470ac0ea0706b4b68e50be54ec6fe4.svg",
+    "static/media/search.svg": "/spotify-clone/static/media/search.b1cec86720eb98a2044de224a418448b.svg",
+    "static/media/play.svg": "/spotify-clone/static/media/play.1e4e96835897ed93d45b7f768dfcc93b.svg",
+    "static/media/horizontal-elipsis.svg": "/spotify-clone/static/media/horizontal-elipsis.e456199090bc6288940d28b06032a070.svg",
+    "main.5ecf8d25.css.map": "/spotify-clone/static/css/main.5ecf8d25.css.map",
+    "main.67aaa567.js.map": "/spotify-clone/static/js/main.67aaa567.js.map",
+    "787.a142c313.chunk.js.map": "/spotify-clone/static/js/787.a142c313.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ecf8d25.css",
+    "static/js/main.67aaa567.js"
+  ]
+}
