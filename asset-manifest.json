@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/spotify-clone/static/css/main.f8be03e3.css",
-    "main.js": "/spotify-clone/static/js/main.67aaa567.js",
+    "main.css": "/spotify-clone/static/css/main.5c96a946.css",
+    "main.js": "/spotify-clone/static/js/main.9658aea7.js",
     "static/js/787.a142c313.chunk.js": "/spotify-clone/static/js/787.a142c313.chunk.js",
     "static/media/spotify-1.svg": "/spotify-clone/static/media/spotify-1.b3db579bd6f063deb13bd8acdd5cc460.svg",
     "index.html": "/spotify-clone/index.html",
@@ -12,12 +12,12 @@
     "static/media/search.svg": "/spotify-clone/static/media/search.b1cec86720eb98a2044de224a418448b.svg",
     "static/media/play.svg": "/spotify-clone/static/media/play.1e4e96835897ed93d45b7f768dfcc93b.svg",
     "static/media/horizontal-elipsis.svg": "/spotify-clone/static/media/horizontal-elipsis.e456199090bc6288940d28b06032a070.svg",
-    "main.f8be03e3.css.map": "/spotify-clone/static/css/main.f8be03e3.css.map",
-    "main.67aaa567.js.map": "/spotify-clone/static/js/main.67aaa567.js.map",
+    "main.5c96a946.css.map": "/spotify-clone/static/css/main.5c96a946.css.map",
+    "main.9658aea7.js.map": "/spotify-clone/static/js/main.9658aea7.js.map",
     "787.a142c313.chunk.js.map": "/spotify-clone/static/js/787.a142c313.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8be03e3.css",
-    "static/js/main.67aaa567.js"
+    "static/css/main.5c96a946.css",
+    "static/js/main.9658aea7.js"
   ]
 }
