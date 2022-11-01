@@ -19,3 +19,27 @@ body {
 #root {
   min-height: 100vh;
 }
+
+.body-overlay-layer-2 {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://i1.sndcdn.com/artworks-000088793859-0cll0a-t500x500.jpg');
+  background-size: 1px;
+}
+
+.body-overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  background-color: #000;
+  opacity: 0.9;
+  /* backdrop-filter: blur(10000px); */
+}

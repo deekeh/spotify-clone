@@ -80,6 +80,9 @@ function App() {
   }
 
   function setSong(id) {
+    const songurl = songs.find(song => song._id === id);
+    console.log(songurl?.photo);
+    document.querySelector(".body-overlay-layer-2").style.backgroundImage = `url('${songurl?.photo}')`;
     setSelectedSong(id);
     toggleFiltersSection(false);
   }
