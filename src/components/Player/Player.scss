@@ -46,11 +46,9 @@
     .song-banner-container {
       display: flex;
       justify-content: center;
-      // width: 300px;
       overflow: hidden;
       height: max(300px);
       img {
-        // width: 100%;
         border-radius: 0.4rem;
       }
     }

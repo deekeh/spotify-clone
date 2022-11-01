@@ -1,6 +1,11 @@
 import "./SongCard.scss";
 
 function SongCard(props) {
+  /**
+   * Format the time duration in mm:ss format.
+   * @param {Number} duration Duration of the song in seconds
+   * @returns {String} Formatted time duration
+   */
   function formatDuration(duration) {
     const d = Number(duration);
     if (isNaN(d)) return "0:00";

@@ -15,6 +15,11 @@ function App() {
 
 
   /* ---- SONG CATEGORIES ---- */
+  /**
+   * Get song categories and their IDs for linking with songs-list API eventually.
+   * If there is an error while fetching the categories, it returns an empty array as a fallback.
+   * @returns {Array} Array of categories of songs
+   */
   async function getCategories() {
     try {
       const response = await fetch("https://api.ss.dev/resource/api", {
@@ -47,6 +52,11 @@ function App() {
 
 
   /* ---- SONGS ---- */
+  /**
+   * Fetch all songs of the selected category from the Songs API.
+   * @param {Number} id The ID of the category of songs to be fetched
+   * @returns {Array} Array of all songs along with name, artist, duration and other meta-data
+   */
   async function getSongs(id) {
     try {
       const response = await fetch("https://api.ss.dev/resource/api", {
@@ -79,6 +89,11 @@ function App() {
     }
   }
 
+  /**
+   * Filter the current selected song and set as the current song to passed to Player for playing.
+   * Also change the background image of the application every time a different song is selected.
+   * @param {String} id ID of the current song to be added to the Player and played on the application
+   */
   function setSong(id) {
     const songurl = songs.find(song => song._id === id);
     console.log(songurl?.photo);
@@ -87,6 +102,11 @@ function App() {
     toggleFiltersSection(false);
   }
 
+  /**
+   * Set the selected category, then set songs of the selected category.
+   * Useful while setting category on Navigation, since both processes need to be done synchronously.
+   * @param {Number} id ID of the selected category
+   */
   async function setCategoryAndSongs(id) {
     setSelectedCategory(id);
     try {
@@ -101,6 +121,7 @@ function App() {
 
 
   /* ---- GET DATA ON LOAD ---- */
+  // set initial data on page load
   useEffect(function () {
     async function onLoad() {
       const categoriesData = await getCategories();
