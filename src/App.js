@@ -90,6 +90,7 @@ function App() {
   async function setCategoryAndSongs(id) {
     setSelectedCategory(id);
     try {
+      setSongs([]);
       const songsData = await getSongs(id);
       setSongs(songsData);
     }

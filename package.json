@@ -1,6 +1,6 @@
 {
   "name": "spotify-clone",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "https://deekeh.github.io/spotify-clone",
   "private": true,
   "dependencies": {

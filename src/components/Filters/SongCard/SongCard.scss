@@ -1,7 +1,22 @@
+$animation-period: 1000ms;
 .SongCard {
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 0.4rem;
+
+  opacity: 0;
+
+  animation-duration: $animation-period;
+  // fill-mode `forwards`so that it stays after the animation is over
+  animation-fill-mode: forwards;
+  animation-name: appear-gradually;
+  animation-timing-function: linear;
+
+  @for $i from 1 through 24 {
+    &:nth-child(#{$i}) {
+      animation-delay: $animation-period * ($i - 1) / 24;
+    }
+  }
 
   &:hover {
     background-color: #13110d;
@@ -43,5 +58,14 @@
       display: flex;
       align-items: center;
     }
+  }
+}
+
+@keyframes appear-gradually {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
