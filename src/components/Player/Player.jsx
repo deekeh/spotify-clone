@@ -12,6 +12,9 @@ import { useEffect, useState } from "react";
 function Player(props) {
   const [isSongPlaying, setIsSongPlaying] = useState(false);
   const [seekPosition, setSeekPosition] = useState(0);
+  /**
+   * Pause the song if it is playing, play it if it is paused.
+   */
   function toggleSong() {
     if (isSongPlaying) {
       document.querySelector('#audio-player').pause();
@@ -23,26 +26,44 @@ function Player(props) {
     }
   }
 
+  /**
+   * Bring the song position to the time mentioned in the seeker range.
+   * @param {Object} e Event object of the seeker
+   */
   function seek(e) {
     document.querySelector('#audio-player').currentTime = Number(e.target.value);
   }
 
+  /**
+   * Synchronize with the time the song is playing at.
+   * @param {Object} e Event object of the song
+   */
   function updateSongTime(e) {
     setSeekPosition(Number(e.target.currentTime));
   }
 
   const [songVolume, setSongVolume] = useState(100);
+  /**
+   * Change browser-level volume of the song currently playing.
+   * @param {Object} e Event object of the volume range
+   */
   function changeVolume(e) {
     document.querySelector('#audio-player').volume = Number(e.target.value) / 100;
     setSongVolume(e.target.value);
   }
 
   const [showVolume, setShowVolume] = useState(false);
+  /**
+   * Show or hide the volume bar when the volume button is pressed.
+   */
   function toggleVolumeBar() {
     setShowVolume(state => !state);
   }
 
   const [localSong, setLocalSong] = useState();
+  /**
+   * Intercept and stop the song currently playing, if a new song is selected.
+   */
   useEffect(function () {
     if (!!props.song?._id && props.song?._id !== localSong?._id) {
       setLocalSong(props.song);

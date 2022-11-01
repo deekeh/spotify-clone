@@ -4,6 +4,10 @@ import "./Navigation.scss";
 import logo from "../../assets/spotify-1.svg";
 
 function Navigation(props) {
+  /**
+   * Set the selected song category and toggle the search sidebar on small devices.
+   * @param {Object} e Event object of button-press
+   */
   function changeCategory(e) {
     props.setSelectedCategory(Number(e.target.value));
     props.toggleSearch(true);

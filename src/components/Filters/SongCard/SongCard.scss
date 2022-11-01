@@ -5,7 +5,6 @@ $animation-period: 1000ms;
   border-radius: 0.4rem;
 
   opacity: 0;
-
   animation-duration: $animation-period;
   // fill-mode `forwards`so that it stays after the animation is over
   animation-fill-mode: forwards;
