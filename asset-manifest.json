@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/spotify-clone/static/css/main.5c96a946.css",
-    "main.js": "/spotify-clone/static/js/main.9658aea7.js",
+    "main.js": "/spotify-clone/static/js/main.fe363f1b.js",
     "static/js/787.a142c313.chunk.js": "/spotify-clone/static/js/787.a142c313.chunk.js",
     "static/media/spotify-1.svg": "/spotify-clone/static/media/spotify-1.b3db579bd6f063deb13bd8acdd5cc460.svg",
     "index.html": "/spotify-clone/index.html",
-    "static/media/volume.svg": "/spotify-clone/static/media/volume.3b7ff4177662eadd458a91d3d7001fc6.svg",
-    "static/media/next.svg": "/spotify-clone/static/media/next.49a51b9bbf4c96d2cdfa631ed94578ad.svg",
-    "static/media/previous.svg": "/spotify-clone/static/media/previous.df887428411353710f8449be5f4396ba.svg",
-    "static/media/pause.svg": "/spotify-clone/static/media/pause.86470ac0ea0706b4b68e50be54ec6fe4.svg",
-    "static/media/search.svg": "/spotify-clone/static/media/search.b1cec86720eb98a2044de224a418448b.svg",
-    "static/media/play.svg": "/spotify-clone/static/media/play.1e4e96835897ed93d45b7f768dfcc93b.svg",
-    "static/media/horizontal-elipsis.svg": "/spotify-clone/static/media/horizontal-elipsis.e456199090bc6288940d28b06032a070.svg",
+    "static/media/volume.svg": "/spotify-clone/static/media/volume.60e74a1532b213caac05406f8142f645.svg",
+    "static/media/next.svg": "/spotify-clone/static/media/next.5314d26b6e69bff2f1e7e5a706626397.svg",
+    "static/media/previous.svg": "/spotify-clone/static/media/previous.c3f67791fd8046a4e12c9f2e26026521.svg",
+    "static/media/pause.svg": "/spotify-clone/static/media/pause.646f5b85c02dff5dc52dbff790740d9e.svg",
+    "static/media/search.svg": "/spotify-clone/static/media/search.9b73e5f4836470fbaec4a79cd0d2f01e.svg",
+    "static/media/play.svg": "/spotify-clone/static/media/play.0743d70c6ce95323fc0f3858be07e655.svg",
+    "static/media/horizontal-elipsis.svg": "/spotify-clone/static/media/horizontal-elipsis.a906d1554485e074809c7b1fe54d8fab.svg",
     "main.5c96a946.css.map": "/spotify-clone/static/css/main.5c96a946.css.map",
-    "main.9658aea7.js.map": "/spotify-clone/static/js/main.9658aea7.js.map",
+    "main.fe363f1b.js.map": "/spotify-clone/static/js/main.fe363f1b.js.map",
     "787.a142c313.chunk.js.map": "/spotify-clone/static/js/787.a142c313.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c96a946.css",
-    "static/js/main.9658aea7.js"
+    "static/js/main.fe363f1b.js"
   ]
 }
